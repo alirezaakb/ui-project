@@ -137,6 +137,12 @@ const config = {
             },
             y: {
                 beginAtZero: true,
+                grid: {
+                    drawTicks: false,
+                },
+                ticks: {
+                    padding: 8,
+                },
             },
         },
         plugins: {
@@ -306,7 +312,11 @@ const config2 = {
                 min: 1,
                 ticks: {
                     stepSize: 1,
-                }
+                    padding: 20,
+                },
+                grid: {
+                    drawTicks: false,
+                },
             },
         },
         plugins: {

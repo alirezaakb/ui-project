@@ -95,6 +95,7 @@ a:hover {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 
+
 }
 
 .section {
@@ -106,6 +107,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+
 }
 
 .section-full {
@@ -172,7 +175,6 @@ a:hover {
     background: none;
     cursor: pointer;
     backface-visibility: hidden;
-    font-size: 36px;
     z-index: 9999;
 }
 
@@ -323,6 +325,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    flex-grow: 3;
 }
 
 .bar-changes {
@@ -425,17 +428,21 @@ a:hover {
 .change-chart {
     display: flex;
     background-color: #f8fbff;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     padding: 0.5rem 0.5rem;
-    gap: 1rem
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .change-chart-btn {
     font-size: 1rem;
     background-color: #ffffff;
     padding: 0.5rem 3rem;
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05);
+    width: 50%;
+    text-align: center;
 }
 
 .rectangles {
@@ -453,4 +460,56 @@ a:hover {
 
 .rectangle-on {
     background-color: #f7c552;
+}
+
+.forecast-sections {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 3;
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.05);
+    gap: 0.2rem;
+}
+
+.forecast-section {
+    height: 100%;
+    box-shadow: none;
+}
+
+.fs-left {
+    width: 30%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.fs-right {
+    width: 70%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+.left-content {
+    width: 30%;
+}
+
+.line {
+    height: 100%;
+    width: 0.3rem;
+    background-color: #f8faff;
+    position: absolute;
+    right: 67%;
+    bottom: 0;
+}
+
+.heading-left {
+    width: 30%;
+}
+
+.btns-forecast {
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+}
+
+.btn-forecast {
+    padding: 0.8rem 1rem;
 }
