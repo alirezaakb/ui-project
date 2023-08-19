@@ -121,7 +121,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
 }
 
 .date {
@@ -158,7 +158,7 @@ a:hover {
 .main {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
     transition: all 0.5s;
     padding: 20px;
     background-color: #f8faff;
@@ -374,7 +374,7 @@ a:hover {
     color: #868e96;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .number-des {
@@ -468,6 +468,7 @@ a:hover {
     grid-column: 1 / 3;
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.05);
     gap: 0.2rem;
+    border-radius: 0.9rem;
 }
 
 .forecast-section {
@@ -512,4 +513,56 @@ a:hover {
 
 .btn-forecast {
     padding: 0.8rem 1rem;
+}
+
+.leaflet-container .leaflet-right {
+    display: none;
+}
+
+#map {
+    height: 30rem;
+    width: 100%;
+}
+
+.owners {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.owner {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #9f9f9f;
+    font-weight: normal;
+}
+
+.owner-color {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.3rem;
+}
+
+.color-yellow {
+    background-color: #f7c552;
+}
+
+.map-left {
+    width: 20%;
+    justify-content: flex-start;
+}
+
+.map-right {
+    width: 80%;
+}
+
+
+.color-blue {
+    background-color: #3c4ca1;
+}
+
+.color-teal {
+    background-color: #3ab2c2;
 }

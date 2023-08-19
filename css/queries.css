@@ -1,4 +1,4 @@
-@media (max-width: 84em) {
+@media screen and (max-width: 84em) {
 
     .container {
         display: flex;
@@ -68,19 +68,31 @@
     }
 }
 
-@media (max-width: 67em) {
+@media screen and (max-width: 67em) {
     .forecast-sections {
         flex-direction: column;
     }
-
+    
     .forecast-section {
         width: 100%;
         box-shadow: none;
     }
 
+    .fs-left {
+        border-bottom-right-radius: 0.9rem;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .fs-right {
+        border-top-left-radius: 0.9rem;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
 }
 
-@media (max-width: 50em) {
+@media screen and (max-width: 50em) {
 
     .header-left {
         flex-direction: column;
@@ -106,7 +118,7 @@
     }
 }
 
-@media (max-width: 34em) {
+@media screen and (max-width: 34em) {
     html {
         font-size: 40%;
     }

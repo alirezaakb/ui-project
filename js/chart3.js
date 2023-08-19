@@ -8,6 +8,7 @@ const data1 = {
             borderColor: '#4ac4a0',
             data: [10, 0, 0, 0, 0],
             stack: 'Stack 0',
+            categoryPercentage: 0.5,
         },
 
         {
@@ -16,6 +17,7 @@ const data1 = {
             borderColor: '#3f80e9',
             data: [5, 15, 12, 8, 14],
             stack: 'Stack 0',
+            categoryPercentage: 0.5,
         },
 
         {
@@ -24,6 +26,7 @@ const data1 = {
             borderColor: '#66bbf8',
             data: [20, 10, 12, 14, 8],
             stack: 'Stack 0',
+            categoryPercentage: 0.5,
         },
 
 
@@ -33,12 +36,13 @@ const data1 = {
             borderColor: '#334297',
             data: [20, 20, 8, 10, 17],
             borderRadius: {
-                topLeft: 10, // تغییر border radius بالای چپ
-                topRight: 10, // تغییر border radius بالای راست
+                topLeft: 8, // تغییر border radius بالای چپ
+                topRight: 8, // تغییر border radius بالای راست
                 bottomLeft: 0, // حفظ شکل مستطیلی در پایین چپ
                 bottomRight: 0, // حفظ شکل مستطیلی در پایین راست
             },
             stack: 'Stack 0',
+            categoryPercentage: 0.5,
         },
 
         {
@@ -47,11 +51,12 @@ const data1 = {
             borderColor: '#f7cc6d',
             data: [40, 50, 10, 70, 30],
             borderRadius: {
-                topLeft: 10, // تغییر border radius بالای چپ
-                topRight: 10, // تغییر border radius بالای راست
+                topLeft: 8, // تغییر border radius بالای چپ
+                topRight: 8, // تغییر border radius بالای راست
                 bottomLeft: 0, // حفظ شکل مستطیلی در پایین چپ
                 bottomRight: 0, // حفظ شکل مستطیلی در پایین راست
             },
+            barPercentage: 0.5,
         }
 
 
