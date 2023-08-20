@@ -441,10 +441,13 @@ a:hover {
 }
 
 .download-icon {
+    display: flex;
     padding: 0.6rem;
     background-color: #e5f0fd;
     stroke: #4081eb;
     border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-first {

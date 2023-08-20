@@ -68,8 +68,11 @@
     .two-part-sections {
         display: flex;
         flex-direction: column;
-        width: 100%;
         box-shadow: none;
+    }
+
+    .two-part-section {
+        width: 100%;
     }
 
     .dw-left {
