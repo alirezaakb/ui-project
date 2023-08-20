@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Ui project</title>
+
+    <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          rel="stylesheet"/>
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/queries.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script crossorigin=""
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+</head>
+<body dir="rtl">
+<div class="container">
+
+    <!--sidenav in desktop mode-->
+    <div class="sidenav sticky" id="mySidenav">
+        <div class="aside">
+            <img alt="logo" class="logo" src="img/shebroweb-logo.png">
+            <button class="nav-link" id="dashboard-link">
+                <svg class="nav-icon" fill="none" id="dashboard-icon" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z"
+                          stroke-width="2"/>
+                </svg>
+                <span class="nav-link-title">داشبورد</span>
+            </button>
+
+            <button class="nav-link nav-link-active" id="health-link">
+                <svg class="nav-icon nav-icon-active" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-link-title">سلامت پایپ لاین</span>
+            </button>
+
+            <button class="nav-link">
+
+                <svg class="chart-icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+                <span class="nav-link-title">پیشرفت پایپ لاین</span>
+            </button>
+        </div>
+
+        <div class="profile">
+            <div class="profile-data">
+                <img alt="profile-image" class="img-profile" src="img/9855.jpg">
+                <a class="profile-name">علیرضا اکبری</a>
+            </div>
+
+            <svg class="svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+
+    </div>
+    <!--end sidenav in desktop mode-->
+
+    <!--  navbar In mobile mode  -->
+    <div class="po">
+        <div class="close-nav">
+            <div class="nav-buttons">
+                <button class="nav-open-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button class="nav-link">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button class="nav-link">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <img alt="profile-image" class="img-profile" src="img/9855.jpg">
+        </div>
+    </div>
+    <!--  end navbar In mobile mode  -->
+    <!--  Health main  -->
+    <div class="main" id="health">
+
+        <div class="header">
+            <!-- pipeline header  -->
+            <!--     pipeline header right     -->
+            <div class="header-right">
+                <span class="header-title">سلامت پایپ لاین</span>
+                <p class="description">تاریخ از 12/4/1402 ,20:30 </p>
+            </div>
+            <!--    end pipeline header right     -->
+            <!--     pipeline header left    -->
+            <div class="header-left">
+                <div class="box">
+                    <span>پایپ لاین ها</span>
+                    <svg class="svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div class="box">
+                    <span>پایپ لاین ها</span>
+                    <svg class="svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div class="box" style="justify-content: flex-start; gap: 1rem">
+                    <svg class="svg-icon" fill="none" stroke="currentColor"
+                         stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                    <span>این ماه</span>
+                </div>
+
+                <div class="download-icon">
+                    <svg fill="none" stroke-width="1.5" viewBox="0 0 24 24"
+                         width="1.8rem" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <!--     end pipeline header left     -->
+        </div>
+        <!--  pipeline header  -->
+        <!-- sections -->
+        <div class="sections">
+            <!--      out header in sections      -->
+            <div class="header-right">
+                <span class="header-title">10 معامله باز برتر</span>
+            </div>
+            <!--     end out header in sections      -->
+
+            <section class="section-first section-full">
+                <div class="section" style="flex-basis: 80%; justify-content: center;">
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                </div>
+                <div class="section" style="flex-basis: 20%">
+                    <div class="description">
+                        <span>شاخص سلامت پایپ لاین</span>
+
+                        <div class="number-des">0.2+</div>
+                    </div>
+                    <p class="index-number">
+                        <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                        <span>3,4</span>
+                    </p>
+
+                    <div class="rectangles">
+                        <div class="rectangle">
+                        </div>
+                        <div class="rectangle">
+                        </div>
+                        <div class="rectangle rectangle-on">
+                        </div>
+                        <div class="rectangle rectangle-on">
+                        </div>
+                        <div class="rectangle rectangle-on">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-full">
+                <div class="content-heading">
+                    <div class="heading-right">
+                        <span>شاخص سلامت پایپ لاین</span>
+                        <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div id="legend-container2"></div>
+
+                    <div class="change-chart">
+                        <div class="change-chart-btn" style="color: #3F7EE9FF">هفته</div>
+                        <div class="change-chart-btn" style="background: none; box-shadow: none">ماه</div>
+
+                    </div>
+
+                </div>
+
+                <canvas id="chart2" style="position: relative; max-height:50vh; max-width:100%"></canvas>
+            </section>
+
+            <div class="header">
+                <div class="header-right">
+                    <span class="header-title">رصد معامله ها</span>
+                </div>
+            </div>
+
+            <section class="two-part-sections">
+                <div class="section two-part-section dw-right">
+                    <div class="content-heading">
+                        <div class="heading-right">
+                            <span>بخش رصد معامله</span>
+                            <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="table-container table-changes deals-watche-table">
+                        <div class="table-row heading">
+                            <div class="row-item col-changes-1">وضعیت</div>
+                            <div class="row-item row-center">معامله</div>
+                            <div class="row-item row-center">ارزش</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 4</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 5</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 6</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 7</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 8</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section two-part-section dw-left">
+                    <div class="content-heading">
+                        <div class="heading-right">
+                            <span>گراف براساس ارزش</span>
+                        </div>
+                    </div>
+                    <canvas id="chart4" style="max-width:100%; margin: auto"></canvas>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="content-heading">
+                    <div class="heading-right">
+                        <span>5 معامله برتر برای مشاهده</span>
+                        <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="table-container table-changes">
+                    <div class="table-row heading">
+                        <div class="row-item" style="flex-grow: 4">وضعیت</div>
+                        <div class="row-item row-center">تعداد معامله</div>
+                        <div class="row-item row-center">ارزش</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <a href="#" style="flex-shrink: 0">داده 1</a>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <a href="#" style="flex-shrink: 0">داده 1</a>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <a href="#" style="flex-shrink: 0">داده 1</a>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <a href="#" style="flex-shrink: 0">داده 1</a>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <a href="#" style="flex-shrink: 0">داده 1</a>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="content-heading">
+                    <div class="heading-right">
+                        <span>معامله های مالکان</span>
+                        <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                             viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+
+
+                <div class="table-container table-changes table-owner">
+                    <div class="table-row heading">
+                        <div class="row-item" style="flex-grow: 4">نام</div>
+                        <div class="row-item row-center">تعداد معامله</div>
+                        <div class="row-item row-center">ارزش</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <div class="col-name-owner">
+                                <img class="img-owner" src="img/9855.jpg">
+                                <div class="col-name-title">
+                                    <span href="#" style="flex-shrink: 0">داده 1</span>
+                                    <p class="description owner-description">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <div class="col-name-owner">
+                                <img class="img-owner" src="img/9855.jpg">
+                                <div class="col-name-title">
+                                    <span href="#" style="flex-shrink: 0">داده 1</span>
+                                    <p class="description owner-description">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <div class="col-name-owner">
+                                <img class="img-owner" src="img/9855.jpg">
+                                <div class="col-name-title">
+                                    <span href="#" style="flex-shrink: 0">داده 1</span>
+                                    <p class="description owner-description">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <div class="col-name-owner">
+                                <img class="img-owner" src="img/9855.jpg">
+                                <div class="col-name-title">
+                                    <span href="#" style="flex-shrink: 0">داده 1</span>
+                                    <p class="description owner-description">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="row-item col-changes-1" style="flex-grow: 4">
+                            <div class="col-name-owner">
+                                <img class="img-owner" src="img/9855.jpg">
+                                <div class="col-name-title">
+                                    <span href="#" style="flex-shrink: 0">داده 1</span>
+                                    <p class="description owner-description">لورم ایپسوم متن ساختگی با تولید سادگی</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-item row-center">12</div>
+                        <div class="row-item row-center">Item 3</div>
+                    </div>
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+    </div>
+    <!--  end Health   -->
+
+</div>
+
+<script src="js/chartPlugin.js"></script>
+<script src="js/chart4.js"></script>
+<script src="js/chart2.js"></script>
+<script src="js/script.js"></script>
+<script src="js/map.js"></script>
+
+</body>
+</html>

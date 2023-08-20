@@ -65,13 +65,15 @@
 }
 
 @media screen and (max-width: 67em) {
-    .forecast-sections {
+    .two-part-sections {
+        display: flex;
         flex-direction: column;
-    }
-
-    .forecast-section {
         width: 100%;
         box-shadow: none;
+    }
+
+    .dw-left {
+        align-self: stretch;
     }
 
     .fs-left {
@@ -123,17 +125,8 @@
         position: relative;
     }
 
-    .sidenav {
-        position: absolute;
-    }
-
-}
-
-
-@media screen and (max-width: 22em) {
-
     .close-nav {
-        position: fixed;
+        position: absolute;
     }
 
     .sidenav {

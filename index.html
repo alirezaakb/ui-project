@@ -20,11 +20,12 @@
 <body dir="rtl">
 <div class="container">
 
+
     <div class="sidenav sticky" id="mySidenav">
         <div class="aside">
             <img alt="logo" class="logo" src="img/shebroweb-logo.png">
-            <button class="nav-link" id="dashboard-link">
-                <svg class="nav-icon" fill="none" id="dashboard-icon" viewBox="0 0 24 24"
+            <button class="nav-link nav-link-active" id="dashboard-link">
+                <svg class="nav-icon nav-icon-active" fill="none" id="dashboard-icon" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z"
                           stroke-width="2"/>
@@ -43,11 +44,14 @@
             </button>
 
             <button class="nav-link">
-                <svg class="nav-icon" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z"
-                          stroke-width="2"/>
+
+                <svg class="chart-icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"/>
                 </svg>
-                <span class="nav-link-title">داشبورد</span>
+                <span class="nav-link-title">پیشرفت پایپ لاین</span>
             </button>
         </div>
 
@@ -65,49 +69,53 @@
 
     </div>
 
-    <div class="close-nav">
-        <div class="nav-buttons">
-            <button class="nav-open-icon">
-                <svg fill="none" stroke="currentColor" stroke-width="1.5"
-                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </button>
+    <!--  navbar In mobile mode  -->
+    <div class="po">
+        <div class="close-nav">
+            <div class="nav-buttons">
+                <button class="nav-open-icon">
+                    <svg fill="none" stroke="currentColor" stroke-width="1.5"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
 
-            <button class="nav-link">
-                <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="1.5"
-                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </button>
+                <button class="nav-link">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
 
-            <button class="nav-link">
-                <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="1.5"
-                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"/>
-                </svg>
-            </button>
+                <button class="nav-link">
+                    <svg class="nav-icon" fill="none" stroke="currentColor" stroke-width="1.5"
+                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <img alt="profile-image" class="img-profile" src="img/9855.jpg">
         </div>
-        <img alt="profile-image" class="img-profile" src="img/9855.jpg">
     </div>
 
+    <!--  Dashboard  -->
     <div class="main" id="dashboard">
 
         <div class="header">
             <div class="header-right">
                 <span class="header-title">پیش بینی درآمد</span>
-                <p class="description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                <p class="description owner-description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
             </div>
         </div>
 
         <div class="sections">
-            <section class="forecast-sections">
-                <div class="section forecast-section fs-right">
+            <section class="two-part-sections">
+                <div class="section two-part-section fs-right">
                     <div class="content-heading">
                         <div class="heading-right">
                             <span>پیش بینی</span>
@@ -124,11 +132,11 @@
 
 
                     </div>
-                    <div class="forecast-section">
+                    <div class="two-part-section">
                         <canvas id="barChart1" style="position: relative; max-height: 100%; max-width:100%"></canvas>
                     </div>
                 </div>
-                <div class="section forecast-section fs-left">
+                <div class="section two-part-section fs-left">
                     <div class="content-heading">
                         <div class="change-chart btns-forecast">
                             <button class="change-chart-btn btn-forecast change-chart-btn-active" style="">هفته</button>
@@ -137,7 +145,7 @@
 
                     </div>
 
-                    <div class="table-container table-changes">
+                    <div class="table-container table-changes table-week">
                         <div class="table-row heading">
                             <div class="row-item col-changes-1">وضعیت</div>
                             <div class="row-item row-center">معامله</div>
@@ -190,6 +198,61 @@
 
 
                     </div>
+
+                    <div class="table-container table-changes table-month hidden">
+                        <div class="table-row heading">
+                            <div class="row-item col-changes-1">وضعیت</div>
+                            <div class="row-item row-center">معامله</div>
+                            <div class="row-item row-center">ارزش</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 4</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 5</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 6</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 7</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="row-item col-changes-1">
+                                <a href="#" style="flex-shrink: 0">داده 8</a>
+
+                            </div>
+                            <div class="row-item row-center">12</div>
+                            <div class="row-item row-center">Item 3</div>
+                        </div>
+
+
+                    </div>
+
                 </div>
             </section>
 
@@ -199,8 +262,8 @@
                 </div>
             </div>
 
-            <section class="forecast-sections">
-                <div class="section forecast-section fs-right map-right">
+            <section class="two-part-sections map-section">
+                <div class="section two-part-section fs-right map-right">
                     <div class="content-heading">
                         <div class="heading-right">
                             <span>نقشه مشتریان</span>
@@ -226,11 +289,11 @@
 
                     </div>
 
-                    <div class="forecast-section">
+                    <div class="two-part-section">
                         <div id="map"></div>
                     </div>
                 </div>
-                <div class="section forecast-section fs-left map-left">
+                <div class="section two-part-section fs-left map-left">
                     <div class="content-heading">
                         <div class="heading-right">
                             <span>مالکان</span>
@@ -323,7 +386,7 @@
                     </div>
                     <div id="legend-container"></div>
                 </div>
-                <canvas id="chart" style="position: relative; max-height:18rem; max-width:100%"></canvas>
+                <canvas id="chart" style="position: relative; max-height:25rem; max-width:100%"></canvas>
             </section>
 
             <section class="section">
@@ -566,123 +629,12 @@
 
         </div>
     </div>
-
-    <div class="main hidden" id="health">
-        <div class="header">
-            <div class="header-right">
-                <span class="header-title">سلامت پایپ لاین</span>
-                <p class="description">تاریخ از 12/4/1402 ,20:30 </p>
-            </div>
-
-            <div class="header-left">
-                <div class="box">
-                    <span>پایپ لاین ها</span>
-                    <svg class="svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                <div class="box">
-                    <span>پایپ لاین ها</span>
-                    <svg class="svg-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-
-                <div class="box" style="justify-content: flex-start; gap: 1rem">
-                    <svg class="svg-icon" fill="none" stroke="currentColor"
-                         stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </svg>
-                    <span>این ماه</span>
-                </div>
-
-                <div class="download-icon">
-                    <svg fill="none" stroke-width="1.5" viewBox="0 0 24 24"
-                         width="1.8rem" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </div>
-        </div>
-
-        <section class="sections">
-            <div class="header-right">
-                <span class="header-title">10 معامله باز برتر</span>
-            </div>
-
-            <div class="section-first section-full">
-                <div class="section" style="flex-basis: 80%">
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
-                </div>
-                <div class="section" style="flex-basis: 20%">
-                    <div class="description">
-                        <span>شاخص سلامت پایپ لاین</span>
-
-                        <div class="number-des">0.2+</div>
-                    </div>
-                    <p class="index-number">
-                        <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5"
-                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"/>
-                        </svg>
-                        <span>3,4</span>
-                    </p>
-
-                    <div class="rectangles">
-                        <div class="rectangle">
-                        </div>
-                        <div class="rectangle">
-                        </div>
-                        <div class="rectangle rectangle-on">
-                        </div>
-                        <div class="rectangle rectangle-on">
-                        </div>
-                        <div class="rectangle rectangle-on">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section section-full">
-                <div class="content-heading">
-                    <div class="heading-right">
-                        <span>شاخص سلامت پایپ لاین</span>
-                        <svg class="icon" fill="none" stroke="currentColor" stroke-width="1.5"
-                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <div id="legend-container2"></div>
-
-                    <div class="change-chart">
-                        <div class="change-chart-btn" style="color: #3F7EE9FF">هفته</div>
-                        <div class="change-chart-btn" style="background: none; box-shadow: none">ماه</div>
-
-                    </div>
-
-                </div>
-
-                <canvas id="chart2" style="position: relative; max-height:50vh; max-width:100%"></canvas>
-            </div>
-        </section>
-    </div>
-
-
+    <!--  end Dashboard  -->
 </div>
-<script src="js/chart.js"></script>
+
+<script src="js/chartPlugin.js"></script>
 <script src="js/chart3.js"></script>
+<script src="js/chart.js"></script>
 <script src="js/script.js"></script>
 <script src="js/map.js"></script>
 

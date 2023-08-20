@@ -1,30 +1,29 @@
-const labelss = [];
-let c = 1;
+const labelsss = [];
+let cc = 1;
 
-for (let i = 0; i < 11; i++) {
-    labelss[i] = `${c} مرداد `;
-    c = c + 3;
+for (let i = 0; i < 9; i++) {
+    labelsss[i] = `هفته ${i + 1}`;
 }
 
-const data = {
-    labels: labelss,
+const data2 = {
+    labels: labelsss,
     datasets: [
         {
             label: 'داده 1',
-            data: [5, 10, 8, 15, 20, 10, 14, 10, 10, 15, 15],
-            backgroundColor: 'rgb(51,65,150)',
-            borderColor: 'rgb(50,65,149)',
-            borderWidth: 1,
+            data: [2.4, 4.8, 2, 3.5, 4, 2, 3, 4, 5],
+            backgroundColor: 'rgba(51,65,150,0)',
+            borderColor: 'rgb(0,147,46)',
+            borderWidth: 2,
             fill: true,
             tension: 0, // Set tension to 0 for straight lines
             pointRadius: 0,
         },
         {
             label: 'داده 2',
-            data: [10, 20, 15, 25, 30, 20, 15, 18, 25, 30, 20],
-            backgroundColor: 'rgb(243,201,107)',
-            borderColor: 'rgb(243,201,107)',
-            borderWidth: 1,
+            data: [3.6, 3, 4.3, 2, 3, 4, 2, 3, 3],
+            backgroundColor: 'rgba(243,201,107,0)',
+            borderColor: 'rgb(139,0,155)',
+            borderWidth: 2,
             fill: true,
             tension: 0, // Set tension to 0 for straight lines
             pointRadius: 0,
@@ -32,10 +31,10 @@ const data = {
 
         {
             label: 'داده 3',
-            data: [60, 54, 52, 45, 40, 40, 50, 60, 50, 35, 40],
-            backgroundColor: 'rgb(102,187,248)',
-            borderColor: 'rgb(102,187,248)',
-            borderWidth: 1,
+            data: [1.8, 2.1, 4, 3, 2, 3.2, 4.4, 4.2, 4],
+            backgroundColor: 'rgba(0,72,121,0.05)',
+            borderColor: 'rgb(0,72,121)',
+            borderWidth: 2,
             fill: true,
             tension: 0, // Set tension to 0 for straight lines
             pointRadius: 0,
@@ -44,9 +43,9 @@ const data = {
 };
 
 // Configuration for the chart
-const config = {
+const config2 = {
     type: 'line',
-    data: data,
+    data: data2,
     options: {
         scales: {
             x: {
@@ -56,19 +55,20 @@ const config = {
                 },
             },
             y: {
-                beginAtZero: true,
+                min: 1,
+                ticks: {
+                    stepSize: 1,
+                    padding: 20,
+                },
                 grid: {
                     drawTicks: false,
-                },
-                ticks: {
-                    padding: 8,
                 },
             },
         },
         plugins: {
             htmlLegend: {
                 // ID of the container to put the legend in
-                containerID: 'legend-container',
+                containerID: 'legend-container2',
             },
             legend: {
                 display: false,
@@ -79,9 +79,5 @@ const config = {
 };
 
 // Create the chart
-const ctx = document.getElementById('chart').getContext('2d');
-const chart = new Chart(ctx, config);
-
-
-
-
+const chart22 = document.getElementById('chart2').getContext('2d');
+const chart2 = new Chart(chart22, config2);

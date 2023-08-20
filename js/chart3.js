@@ -101,7 +101,7 @@ const config1 = {
             },
         },
     },
-    plugins: [htmlLegendPlugin2],
+    plugins: [htmlLegendPlugin],
 };
 
 const ctx1 = document.getElementById('barChart1').getContext('2d');
