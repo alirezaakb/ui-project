@@ -4,7 +4,3 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: ''
 }).addTo(map);
-
-points.forEach(function (point) {
-    L.marker(point.coords).addTo(map).bindPopup(point.title);
-});

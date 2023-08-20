@@ -37,10 +37,6 @@
         height: 100%;
     }
 
-    .close-nav-back {
-        width: 10rem;
-    }
-
     .nav-open-icon {
         display: block;
     }
@@ -127,9 +123,6 @@
         position: relative;
     }
 
-    /*.close-nav {*/
-    /*    position: absolute;*/
-    /*}*/
     .sidenav {
         position: absolute;
     }
@@ -137,10 +130,10 @@
 }
 
 
-@media screen and (max-width: 21em) {
+@media screen and (max-width: 22em) {
 
     .close-nav {
-        position: absolute;
+        position: fixed;
     }
 
     .sidenav {

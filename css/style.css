@@ -260,6 +260,7 @@ a:hover {
     border-radius: 30%;
 }
 
+
 .close-nav {
     display: none;
 }
@@ -437,12 +438,21 @@ a:hover {
 
 .change-chart-btn {
     font-size: 1rem;
-    background-color: #ffffff;
+    background: none;
+    border: none;
     padding: 0.5rem 3rem;
     border-radius: 0.8rem;
-    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05);
     width: 50%;
     text-align: center;
+    font-weight: bold;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.change-chart-btn-active {
+    background-color: #ffffff;
+    box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05);
+    color: #3F7EE9FF;
 }
 
 .rectangles {

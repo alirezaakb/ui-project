@@ -37,3 +37,16 @@ if (!document.getElementById('health').classList.contains('hidden') && document.
     document.getElementById('health-link').classList.add('nav-link-hover');
     document.getElementById('health-icon-icon').classList.add('nav-icon-hover');
 }
+
+const btnForecast = document.querySelectorAll(".change-chart-btn.btn-forecast");
+
+
+btnForecast[0].addEventListener('click', function () {
+    btnForecast[1].classList.remove('change-chart-btn-active');
+    btnForecast[0].classList.add('change-chart-btn-active');
+});
+
+btnForecast[1].addEventListener('click', function () {
+    btnForecast[0].classList.remove('change-chart-btn-active');
+    btnForecast[1].classList.add('change-chart-btn-active');
+});
