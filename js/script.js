@@ -1,8 +1,7 @@
 'use strict'
 
-const navLink = document.querySelectorAll(".nav-link-title");
-
-document.querySelector(".nav-open-icon").addEventListener("click", function () {
+const navOpenIcon = document.querySelector(".nav-open-icon")
+navOpenIcon.addEventListener("click", function () {
     document.getElementById("mySidenav").classList.toggle('nav-open')
 
     const navButton = document.querySelector(".nav-buttons").querySelectorAll('.nav-link');

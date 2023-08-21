@@ -661,3 +661,22 @@ a:hover {
     gap: 0;
 }
 
+.circle-icon {
+    border-radius: 50%;
+    line-height: 64px; /* مرجع آیکون (وسط دایره) */
+    color: white;
+    font-size: 16px; /* افزایش اندازه فونت */
+    text-align: center;
+}
+
+.blue-icon {
+    background-color: #3c4ba0;
+}
+
+.teal-icon {
+    background-color: #3ab1c0;
+}
+
+.green-icon {
+    background-color: #4ac4a0;
+}
