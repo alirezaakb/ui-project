@@ -188,7 +188,7 @@ a:hover {
     background: none;
     cursor: pointer;
     backface-visibility: hidden;
-    z-index: 9999;
+    z-index: 999;
 }
 
 .nav-width {
@@ -627,6 +627,7 @@ a:hover {
     position: sticky;
     top: 0;
     right: 0;
+    z-index: 99;
 }
 
 #chart4 {

@@ -39,6 +39,7 @@
 
     .nav-open-icon {
         display: block;
+        z-index: 99999;
     }
 
     .container {
