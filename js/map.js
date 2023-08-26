@@ -6,13 +6,13 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 const icon1 = [L.divIcon({
-    className: 'circle-icon blue-icon',
+    className: 'circle-icon color-blue',
     iconSize: [16, 16],
 }), L.divIcon({
-    className: 'circle-icon teal-icon',
+    className: 'circle-icon color-teal',
     iconSize: [16, 16],
 }), L.divIcon({
-    className: 'circle-icon green-icon',
+    className: 'circle-icon color-yellow',
     iconSize: [16, 16],
 })
 ];

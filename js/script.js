@@ -1,14 +1,15 @@
 'use strict'
 
-const navOpenIcon = document.querySelector(".nav-open-icon")
-navOpenIcon.addEventListener("click", function () {
-    document.getElementById("mySidenav").classList.toggle('nav-open');
-    document.querySelector('.img-close-nav').classList.toggle('hidden');
-    const navButton = document.querySelector(".nav-buttons").querySelectorAll('.nav-link');
-    for (let i = 0; i < navButton.length; i++) {
-        navButton[i].classList.toggle('hidden');
-    }
+let btn = document.getElementById('btn');
+let sidebar = document.querySelector('.sidebar');
+let main = document.querySelector('.main');
+
+btn.addEventListener('click', function () {
+    sidebar.classList.toggle('active');
+    main.classList.toggle('main-sidebar-active');
 });
+
+const navOpenIcon = document.querySelector(".nav-open-icon");
 
 const btnForecast = document.querySelectorAll(".btn-forecast");
 const tableMonth = document.querySelector('.table-month');
@@ -29,4 +30,5 @@ btnForecast[1].addEventListener('click', function () {
     tableWeek.classList.add('hidden');
     tableMonth.classList.remove('hidden')
 });
+
 
