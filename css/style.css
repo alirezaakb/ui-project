@@ -529,7 +529,6 @@ body {
     align-items: center;
     justify-content: flex-end;
     gap: 0.3rem;
-    z-index: 9999;
 }
 
 .rectangle-index {
