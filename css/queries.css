@@ -5,7 +5,10 @@
     }
 }
 
+
 @media screen and (max-width: 67em) {
+
+
     .two-part-sections {
         display: flex;
         flex-direction: column;
@@ -34,9 +37,10 @@
 
     .sidebar {
         opacity: 0.9;
+        z-index: 9999;
     }
 
-    .main-sidebar-active {
+    .main {
         margin-right: 8rem;
     }
 
@@ -66,6 +70,7 @@
         justify-content: center;
         align-items: center;
     }
+
 }
 
 @media screen and (max-width: 34em) {
@@ -73,7 +78,7 @@
         font-size: 40%;
     }
 
-    .container {
-        position: relative;
+    .main {
+        margin-right: 8rem;
     }
 }

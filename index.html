@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Ui project</title>
-
     <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           rel="stylesheet"/>
@@ -15,11 +14,11 @@
     <script crossorigin=""
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
             src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 </head>
 <body dir="rtl">
+<!------------------------- sidebar --------------------------->
 <nav class="sidebar">
     <div class="logo-content">
         <div class="logo">
@@ -32,7 +31,7 @@
     </div>
     <ul class="nav-list">
         <li>
-            <a href="#">
+            <a class="active" href="#" id="dashboard-link">
                 <svg class="nav-icon nav-icon-active" fill="none" id="dashboard-icon" viewBox="0 0 24 24"
                      xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5ZM14 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V5ZM4 16a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3ZM14 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-6Z"
@@ -76,9 +75,10 @@
         </div>
     </div>
 </nav>
-<!--  Dashboard  -->
-<main class="main" id="dashboard">
 
+<!---------------------------------------------  Dashboard  ---------------------------------------->
+<main class="main" id="dashboard">
+    <!-----------------------------  top header  -------------------------------->
     <div class="header">
         <div class="header-right">
             <span class="header-title">پیش بینی درآمد</span>
@@ -86,9 +86,12 @@
         </div>
     </div>
 
+    <!------------------------------  sections  -------------------------------------->
     <div class="sections">
+        <!----------    forecast section    ---------->
         <section class="two-part-sections">
             <div class="section two-part-section fs-right">
+                <!-----------------------  forecast chart ------------------------->
                 <div class="section-heading">
                     <div class="heading-right">
                         <span>پیش بینی</span>
@@ -106,13 +109,13 @@
                     <canvas id="barChart1" style="position: relative; max-height: 100%; max-width:100%"></canvas>
                 </div>
             </div>
+            <!--------------------------------- forecast table ------------------------------->
             <div class="section two-part-section part-section-left">
                 <div class="section-heading">
-                    <div class="change-chart btns-forecast">
-                        <button class="change-chart-btn btn-forecast change-chart-btn-active" style="">هفته</button>
-                        <button class="change-chart-btn btn-forecast">ماه</button>
+                    <div class="toggle-buttons btns-forecast">
+                        <button class="toggle-btn btn-forecast toggle-btn-active" style="">هفته</button>
+                        <button class="toggle-btn btn-forecast">ماه</button>
                     </div>
-
                 </div>
 
                 <div class="table-container table-changes table-week">
@@ -165,8 +168,6 @@
                         <div class="row-item row-center">12</div>
                         <div class="row-item row-center">Item 3</div>
                     </div>
-
-
                 </div>
 
                 <div class="table-container table-changes table-month hidden">
@@ -219,19 +220,19 @@
                         <div class="row-item row-center">12</div>
                         <div class="row-item row-center">Item 3</div>
                     </div>
-
-
                 </div>
-
             </div>
         </section>
 
+        <!----------------------------    middle header    ------------------------------->
         <div class="header">
             <div class="header-right">
                 <span class="header-title">نقشه معامله های باز</span>
             </div>
         </div>
 
+
+        <!----------------------------    map section    ------------------------------>
         <section class="two-part-sections map-section">
             <div class="section two-part-section part-section-right map-right">
                 <div class="section-heading">
@@ -243,7 +244,6 @@
                                   stroke-linecap="round"
                                   stroke-linejoin="round"/>
                         </svg>
-
                     </div>
 
                     <div class="description">
@@ -255,8 +255,6 @@
                                   stroke-linejoin="round"/>
                         </svg>
                     </div>
-
-
                 </div>
 
                 <div class="two-part-section">
@@ -335,14 +333,11 @@
                             علی محمدی
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
         </section>
 
-
+        <!------------------------------    history cost section   ----------------------------------->
         <section class="section section-full">
             <div class="section-heading">
                 <div class="heading-right">
@@ -358,6 +353,8 @@
             </div>
             <canvas id="chart" style="position: relative; max-height:25rem; max-width:100%"></canvas>
         </section>
+
+        <!-----------------------------------  changes section  ------------------------------------>
 
         <section class="section">
             <div class="section-heading">
@@ -475,6 +472,7 @@
             </div>
         </section>
 
+        <!----------------------------- overview section  ----------------------------------->
         <section class="section">
             <div class="section-heading">
                 <div class="heading-right">
@@ -593,13 +591,9 @@
                 </div>
 
             </div>
-
-
         </section>
-
     </div>
 </main>
-<!--  end Dashboard  -->
 
 <script src="js/chartPlugin.js"></script>
 <script src="js/chart3.js"></script>

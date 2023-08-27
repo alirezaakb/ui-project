@@ -1,34 +1,50 @@
 'use strict'
 
-let btn = document.getElementById('btn');
+let menuBtn = document.getElementById('btn');
 let sidebar = document.querySelector('.sidebar');
 let main = document.querySelector('.main');
 
-btn.addEventListener('click', function () {
-    sidebar.classList.toggle('active');
-    main.classList.toggle('main-sidebar-active');
+
+// close sidebar when max-width is 84 em
+function sidebarResponsive(maxWidth) {
+    if (maxWidth.matches) {
+        sidebar.classList.add('close-sidebar');
+        main.classList.add('main-close-sidebar');
+    } else {
+        sidebar.classList.remove('close-sidebar');
+        main.classList.remove('main-close-sidebar');
+    }
+}
+
+const maxWidth = window.matchMedia("(max-width: 84em)")
+sidebarResponsive(maxWidth);
+maxWidth.addListener(sidebarResponsive);
+
+// button event for close sidebar
+menuBtn.addEventListener('click', function () {
+    sidebar.classList.toggle('close-sidebar');
+    main.classList.toggle('main-close-sidebar');
 });
 
-const navOpenIcon = document.querySelector(".nav-open-icon");
 
+//  toggle buttons
 const btnForecast = document.querySelectorAll(".btn-forecast");
 const tableMonth = document.querySelector('.table-month');
 const tableWeek = document.querySelector('.table-week');
 
-
 btnForecast[0].addEventListener('click', function () {
-    btnForecast[1].classList.remove('change-chart-btn-active');
-    btnForecast[0].classList.add('change-chart-btn-active');
-    tableWeek.classList.remove('hidden');
-    tableMonth.classList.add('hidden');
+    btnForecast[1].classList.toggle('toggle-btn-active');
+    btnForecast[0].classList.toggle('toggle-btn-active');
+    tableWeek.classList.toggle('hidden');
+    tableMonth.classList.toggle('hidden');
 
 });
 
 btnForecast[1].addEventListener('click', function () {
-    btnForecast[0].classList.remove('change-chart-btn-active');
-    btnForecast[1].classList.add('change-chart-btn-active');
-    tableWeek.classList.add('hidden');
-    tableMonth.classList.remove('hidden')
+    btnForecast[0].classList.toggle('toggle-btn-active');
+    btnForecast[1].classList.toggle('toggle-btn-active');
+    tableWeek.classList.toggle('hidden');
+    tableMonth.classList.toggle('hidden')
 });
 
 
