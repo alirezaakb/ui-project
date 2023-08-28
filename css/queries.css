@@ -50,6 +50,7 @@
 
     .header-left {
         flex-direction: column;
+        gap: 1.4rem;
     }
 
     .section-first {
@@ -59,7 +60,7 @@
     .header {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.4rem;
         justify-content: space-between;
         align-items: center;
     }
@@ -69,6 +70,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 1.4rem;
     }
 
 }
@@ -80,5 +82,10 @@
 
     .main {
         margin-right: 8rem;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        gap: 2rem;
     }
 }
