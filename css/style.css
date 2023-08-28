@@ -501,11 +501,12 @@ li a.active .links-name {
     color: var(--gray-text);
     background-color: #ffffff;
     width: 15rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
     border-radius: 0.5rem;
+    align-items: center;
 }
 
 .download-icon {
@@ -705,4 +706,10 @@ li a.active .links-name {
 .svg-icon {
     width: 1.4rem;
     stroke: #868e96;
+}
+
+#date-input {
+    border: none;
+    color: var(--gray-text);
+    text-align: center;
 }
