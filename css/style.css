@@ -13,7 +13,7 @@ html {
     /*========== color ============*/
     --background-color: #f8faff;
     --gray-text: #adb5bd;
-    --hover-navlink: #e5f0fd;
+    --blue-light-color: #e5f0fd;
     --blue-color: #3f80e9;
     --yellow-color: #f7c552;
     /*=========== size =============*/
@@ -136,7 +136,7 @@ body {
 }
 
 .sidebar ul li a:hover {
-    background: var(--hover-navlink);
+    background: var(--blue-light-color);
     color: var(--blue-color);
 }
 
@@ -165,14 +165,14 @@ body {
 }
 
 li a.active {
-    background: var(--hover-navlink);
+    background: var(--blue-light-color);
     color: var(--blue-color);
     stroke: var(--blue-color);
     fill: var(--blue-color);
 }
 
 li a.active .nav-icon {
-    background: var(--hover-navlink);
+    background: var(--blue-light-color);
     color: var(--blue-color);
     stroke: var(--blue-color);
     fill: var(--blue-color);
@@ -195,6 +195,7 @@ li a.active .links-name {
     height: 6rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 0 2rem;
 }
 
@@ -507,6 +508,7 @@ li a.active .links-name {
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
     border-radius: 0.5rem;
     align-items: center;
+    font-size: 1.2rem;
 }
 
 .download-icon {
@@ -711,5 +713,21 @@ li a.active .links-name {
 #date-input {
     border: none;
     color: var(--gray-text);
-    text-align: center;
+    font-size: 1.2rem;
+    width: 11rem;
+    display: flex;
+    align-items: center;
+}
+
+#date-input::placeholder {
+    color: var(--gray-text);
+}
+
+.pipelines {
+    width: 15rem;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--gray-text);
+    background: none;
+    cursor: pointer;
 }
